@@ -26,5 +26,20 @@ int main()
     outfile.close();
 
     ifstream infile;  //membuat objek input file stream
+    infile.open("contoh file.txt");  //membuka file yang dituliskan
+
+    cout << endl << ">= Membuka dan membaca file " << endl;
+    //apabila file ada atau file sudah terbuat
+    if (infile.is_open())
+    {
+        while (getline(infile, baris))  //lakukan perulangan setiap baris
+        {
+            cout << baris << '\n'; //dan lakukan penampilan disini
+        }
+        infile.close(); //tutup file setelah selesai
+    }
+    //jika tidak ditemukan maka akan ditampilkan
+    else cout << "Unable to open file";
+    return 0;
 }
 
