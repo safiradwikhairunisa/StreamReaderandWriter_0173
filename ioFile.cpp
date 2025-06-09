@@ -12,7 +12,7 @@ int main()
 
     cout << ">= Menulis file , \'q\' untuk keluar" << endl;
 
-        while (true)
+    while (true)
     {
         cout << "- ";
         //mendapatkan setiap karakter dalam satu baris
@@ -24,5 +24,7 @@ int main()
     }
     //selesai dalam menulis sekarang tutup file
     outfile.close();
+
+    ifstream infile;  //membuat objek input file stream
 }
 
